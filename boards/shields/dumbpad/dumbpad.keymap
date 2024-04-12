@@ -11,7 +11,10 @@
         compatible = "zmk,keymap";
 
         default_layer {
-
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
         bindings = <
         >;
 
