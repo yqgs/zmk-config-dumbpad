@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define LOWER 1
 
 / {
     keymap {
