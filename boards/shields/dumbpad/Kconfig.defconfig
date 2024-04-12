@@ -1,1 +1,10 @@
+if SHIELD_DUMBPAD
 
+config ZMK_USB
+	default n
+
+#config ZMK_DUMBPAD
+#    default "Dumbpad"
+config ZMK_KEYBOARD_NAME
+    default "Dumbpad"
+endif
