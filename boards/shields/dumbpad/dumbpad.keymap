@@ -11,10 +11,10 @@
 
         default_layer {
             bindings = <
-&kp NUMBER_7     &kp NUMBER_8 &kp NUMBER_9  &kp A
-&trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans
+&kp NUMBER_7     &kp NUMBER_8 &kp NUMBER_9  &kp D
+&kp NUMBER_7     &kp NUMBER_8 &kp NUMBER_9  &kp C
+&kp NUMBER_7     &kp NUMBER_8 &kp NUMBER_9  &kp B
+&kp R &kp NUMBER_1     &kp NUMBER_2 &kp NUMBER_3  &kp A
         
         >;
 
