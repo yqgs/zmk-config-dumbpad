@@ -11,10 +11,10 @@
 
         default_layer {
             bindings = <
-&kp Q     &kp R &kp T  &kp D
+&kp Q     &kp R &kp T  &kp D &kp I
 &kp NUMBER_7     &kp NUMBER_8 &kp NUMBER_9  &kp C
 &kp NUMBER_4     &kp NUMBER_5 &kp NUMBER_6  &kp B
-&kp R &kp NUMBER_1     &kp NUMBER_2 &kp NUMBER_3  &kp A
+&kp NUMBER_1     &kp NUMBER_2 &kp NUMBER_3  &kp A
         
         >;
 sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
