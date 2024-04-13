@@ -11,7 +11,7 @@
 
         default_layer {
             bindings = <
-&trans  &trans  &trans  &trans
+&kp NUMBER_7     &kp NUMBER_8 &kp NUMBER_9  &kp A
 &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans
