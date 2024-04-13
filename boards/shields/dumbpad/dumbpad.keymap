@@ -17,7 +17,7 @@
 &kp R &kp NUMBER_1     &kp NUMBER_2 &kp NUMBER_3  &kp A
         
         >;
-
+sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
     };
 };
 };
