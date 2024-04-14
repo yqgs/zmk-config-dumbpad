@@ -37,11 +37,6 @@
             key-positions = <1 2>;
             bindings = <&bootloader>;
         };
-        combo_reset {
-            timeout-ms = <TIMEOUT>;
-            key-positions = <1 3>;
-            bindings = <&reset>;
-        };
         combo_bt_nxt {
             timeout-ms = <TIMEOUT>;
             key-positions = <1 4>;
