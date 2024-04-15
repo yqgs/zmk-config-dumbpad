@@ -13,7 +13,9 @@
 #define TIMEOUT 50
 #define DEFAULT 0
 #define ADJUST  1
-
+&kscan0 {
+    debounce-scan-period-ms = <10>;
+};
 &left_encoder {
     status = "okay";
 };
