@@ -120,7 +120,7 @@
             bindings = <
                             &kp ESC    &none         &bt BT_CLR      &kp DEL
                             &none      &none         &none           &kp KP_MINUS
-                            &mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
+                            &none	&none	&none	&none
                 &trans      &tg TEST     &none         &trans          &kp ENTER
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
