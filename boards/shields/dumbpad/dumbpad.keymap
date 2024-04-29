@@ -67,15 +67,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        lh_pht: left_positional_hold_tap {
+		th: taphold {
             compatible = "zmk,behavior-hold-tap";
+            label = "TAP HOLD";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-            quick-tap-ms = <200>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <120>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <4>;    // <---[[right-hand keys]]
         };
+
     };
     keymap0: keymap {
         compatible = "zmk,keymap";
@@ -83,7 +84,7 @@
         test_layer {
             label = "test layer";
             bindings = <
-                            &mt LGUI A    &lh_pht LGUI S    AS(Q)    &kp BSPC
+                            &mt LGUI A    &lh_pht LGUI S    &th EQUAL MINUS    &kp BSPC
                             &kp KP_N4    &kp KP_N5       &kp KP_N6         &kp KP_PLUS
                             &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_MULTIPLY
                 &kp C_PP    &mo ADJUST   &kp KP_N0       &kp KP_DOT        &kp KP_EQUAL
