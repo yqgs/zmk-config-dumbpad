@@ -79,16 +79,15 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <135>;
-            quick_tap_ms = <0>;
+            require-prior-idle-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-		th: taphold {
+	th: taphold {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAP HOLD";
             #binding-cells = <2>;
             tapping-term-ms = <180>;
-            quick-tap-ms = <120>;
+            require-prior-idle-ms = <120>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -98,7 +97,6 @@
         compatible = "zmk,keymap";
 
         test_layer {
-            label = "test layer";
             bindings = <
                             &mt LGUI A	&kp O	&th EQUAL MINUS	&kp BSPC
                             &kp KP_N4    &kp KP_N5       &kp KP_N6         &kp KP_PLUS
@@ -110,7 +108,7 @@
         };
 
         default_layer {
-            label = "default layer";
+            
             bindings = <
                             &kp KP_N7    &kp KP_N8       &kp KP_N9         &kp BSPC
                             &kp KP_N4    &kp KP_N5       &kp KP_N6         &kp KP_PLUS
@@ -122,7 +120,7 @@
         };
 
         fn_layer {
-            label = "fn layer";
+            
             bindings = <
                             &kp ESC    &none         &bt BT_CLR      &kp DEL
                             &none      &none         &none           &kp KP_MINUS
