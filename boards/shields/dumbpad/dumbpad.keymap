@@ -26,6 +26,13 @@
 &right_encoder {
     status = "disabled";
 };
+&mt {
+        quick-tap-ms = <200>;
+};
+
+&sk {
+   	release-after-ms = <4000>;
+};
 
 / {
 /*  ------------------
