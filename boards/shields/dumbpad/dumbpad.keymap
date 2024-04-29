@@ -84,7 +84,7 @@
         test_layer {
             label = "test layer";
             bindings = <
-                            &mt LGUI A   AS(S)    &th EQUAL MINUS    &kp BSPC
+                            &mt LGUI A	AS(S)	&th EQUAL MINUS	&kp BSPC
                             &kp KP_N4    &kp KP_N5       &kp KP_N6         &kp KP_PLUS
                             &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_MULTIPLY
                 &kp C_PP    &mo ADJUST   &kp KP_N0       &kp KP_DOT        &kp KP_EQUAL
