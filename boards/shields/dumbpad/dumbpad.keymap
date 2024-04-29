@@ -76,9 +76,9 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <5 6 7 8 9 10>;    // <---[[right-hand keys]]
         };
-&mt {
-    retro-tap;
-};
+        mt: mod_tap {
+            retro-tap;
+        };
     };
     keymap0: keymap {
         compatible = "zmk,keymap";
