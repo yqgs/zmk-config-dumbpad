@@ -50,6 +50,17 @@
  *  | 12 13 14 15 16 |
  *  ------------------
  */
+    macros {
+        zed_em_kay: zed_em_kay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         combo_bootloader {
@@ -74,6 +85,11 @@
         sensors = <&left_encoder &right_encoder>;
 	triggers-per-rotation = <20>;
     };
+	ZMK_BEHAVIOR(test_type, macro,
+	    wait-ms = <100>;
+	    tap-ms = <5>;
+	    bindings = <&kp X &kp U &kp S>;
+	)
     behaviors {
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -100,7 +116,7 @@
             bindings = <
                             &mt LGUI A	&kp O	&th EQUAL MINUS	&kp BSPC
                             &rgb_ug RGB_TOG    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR    &rgb_ug RGB_BRI
-                            &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_MULTIPLY
+                            &test_type    &kp KP_N2       &kp KP_N3         &kp KP_MULTIPLY
                 &kp C_PP    &to DEFAULT   &kp KP_N0       &kp KP_DOT        &kp KP_EQUAL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
