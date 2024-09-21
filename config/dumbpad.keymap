@@ -40,7 +40,7 @@
 
         calculator_combo {
             bindings = <&kp K_CALCULATOR>;
-            key-positions = <0 13>;
+            key-positions = <13 14>;
             timeout-ms = <TIMEOUT>;
         };
     };
