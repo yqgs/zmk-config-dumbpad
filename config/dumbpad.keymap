@@ -4,13 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors/mouse_key_press.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/rgb.h>
 
 #define TIMEOUT 50
 #define DEFAULT 0
@@ -19,6 +16,10 @@
 &left_encoder { status = "okay"; };
 
 &right_encoder { status = "disabled"; };
+
+&mt {
+    tapping-term-ms = <200>;
+};
 
 / {
     /*  ------------------
@@ -38,9 +39,9 @@
             bindings = <&bt BT_CLR>;
         };
 
-        calculator_combo {
-            bindings = <&kp K_CALCULATOR>;
-            key-positions = <13 14>;
+        calculator_combo_consumer {
+            bindings = <&kp C_AL_CALCULATOR>;
+            key-positions = <14 15>;
             timeout-ms = <TIMEOUT>;
         };
     };
@@ -49,6 +50,7 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
     };
+
 
     keymap0: keymap {
         compatible = "zmk,keymap";
@@ -59,7 +61,7 @@
                             &kp N7         &kp N8         &kp N9           &kp KP_PLUS
                             &kp N4         &kp N5         &kp N6           &kp KP_SUBTRACT
                             &kp N1         &kp N2         &kp N3           &kp KP_MULTIPLY
-                &mo 1       &kp BACKSPACE  &kp N0         &kp KP_DOT       &kp KP_DIVIDE
+                &mo 1       &kp BACKSPACE  &kp N0         &kp KP_DOT       &mt KP_ENTER KP_DIVIDE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
