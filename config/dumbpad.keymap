@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/ext_power.h>
 
 #define TIMEOUT 50
 #define DEFAULT 0
@@ -17,9 +16,7 @@
 
 &right_encoder { status = "disabled"; };
 
-&mt {
-    tapping-term-ms = <200>;
-};
+&mt { tapping-term-ms = <200>; };
 
 / {
     /*  ------------------
@@ -33,12 +30,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_btclr {
-            timeout-ms = <TIMEOUT>;
-            key-positions = <1 6>;
-            bindings = <&bt BT_CLR>;
-        };
-
         calculator_combo_consumer {
             bindings = <&kp C_AL_CALCULATOR>;
             key-positions = <14 15>;
@@ -51,17 +42,16 @@
         sensors = <&left_encoder &right_encoder>;
     };
 
-
     keymap0: keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             label = "default layer";
             bindings = <
-                            &kp N7         &kp N8         &kp N9           &kp KP_PLUS
-                            &kp N4         &kp N5         &kp N6           &kp KP_SUBTRACT
-                            &kp N1         &kp N2         &kp N3           &kp KP_MULTIPLY
-                &mo 1       &kp BACKSPACE  &kp N0         &kp KP_DOT       &mt KP_ENTER KP_DIVIDE
+&kp N7  &kp N8         &kp N9  &kp KP_PLUS
+&kp N4  &kp N5         &kp N6  &kp KP_SUBTRACT
+&kp N1  &kp N2         &kp N3  &kp KP_MULTIPLY
+&mo 1   &kp BACKSPACE  &kp N0  &kp KP_DOT       &mt KP_ENTER KP_DIVIDE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -70,10 +60,10 @@
         fn_layer {
             label = "fn layer";
             bindings = <
-                            &kp ESC     &none       &bt BT_CLR     &kp DEL
-                            &none       &none       &none          &kp KP_MINUS
-                            &kp EP_TOG  &kp EP_OFF  &kp EP_ON      &kp KP_DIVIDE
-                &trans      &trans      &none       &trans         &kp ENTER
+&kp ESC       &none         &none         &kp DEL
+&none         &none         &none         &kp KP_MINUS
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp KP_DIVIDE
+&trans        &trans        &none         &bt BT_CLR     &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
