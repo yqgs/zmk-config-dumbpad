@@ -60,7 +60,7 @@
         fn_layer {
             label = "fn layer";
             bindings = <
-&bootloader   &none         &none          &none
+&bootloader   &none         &none          &kp ESCAPE
 &none         &none         &none          &kp KP_MINUS
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &kp KP_DIVIDE
 &trans        &none         &kp BACKSPACE  &bt BT_CLR     &kp ENTER
