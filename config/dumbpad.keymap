@@ -60,10 +60,10 @@
         fn_layer {
             label = "fn layer";
             bindings = <
-&bootloader   &none         &kp BACKSPACE  &kp ESCAPE
-&none         &none         &none          &kp KP_MINUS
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &kp KP_DIVIDE
-&trans        &none         &none          &bt BT_CLR     &kp ENTER
+&bootloader   &none         &kp ESCAPE    &kp BACKSPACE
+&none         &none         &none         &kp KP_MINUS
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp KP_DIVIDE
+&trans        &none         &none         &bt BT_CLR     &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
