@@ -27,6 +27,8 @@
           &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_MULTIPLY
 &kp C_PP  &td        &kp KP_N0  &kp KP_DOT  &kp KP_EQUAL
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_1 {
