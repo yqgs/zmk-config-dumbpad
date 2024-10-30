@@ -10,10 +10,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 
-#define TIMEOUT 50
-#define DEFAULT 0
-#define ADJUST  1
-
 &left_encoder {
     status = "okay";
 };
@@ -33,17 +29,17 @@
     combos {
         compatible = "zmk,combos";
         combo_bootloader {
-            timeout-ms = <TIMEOUT>;
+            timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&bootloader>;
         };
         combo_bt_nxt {
-            timeout-ms = <TIMEOUT>;
+            timeout-ms = <50>;
             key-positions = <1 4>;
             bindings = <&bt BT_NXT>;
         };
         combo_btclr {
-            timeout-ms = <TIMEOUT>;
+            timeout-ms = <50>;
             key-positions = <1 6>;
             bindings = <&bt BT_CLR>;
         };
@@ -63,7 +59,7 @@
                             &kp KP_N7    &kp KP_N8       &kp KP_N9         &kp BSPC
                             &kp KP_N4    &kp KP_N5       &kp KP_N6         &kp KP_PLUS
                             &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_MULTIPLY
-                &kp C_PP    &mo ADJUST   &kp KP_N0       &kp KP_DOT        &kp KP_EQUAL
+                &kp C_PP    &mo 1        &kp KP_N0       &kp KP_DOT        &kp KP_EQUAL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
