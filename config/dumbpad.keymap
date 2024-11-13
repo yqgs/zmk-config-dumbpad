@@ -33,10 +33,10 @@
 
         layer_1 {
             bindings = <
-        &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans
-&trans  &to 0   &trans  &trans  &trans
+        &bootloader  &trans  &trans  &trans
+        &trans       &trans  &trans  &trans
+        &trans       &trans  &trans  &trans
+&trans  &to 0        &trans  &trans  &trans
             >;
         };
     };
