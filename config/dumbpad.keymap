@@ -8,6 +8,12 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+    	triggers-per-rotation = <50>;
+    };
+
     behaviors {
         td: td {
             compatible = "zmk,behavior-tap-dance";
