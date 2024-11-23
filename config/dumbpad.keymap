@@ -5,13 +5,14 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder>;
-    	triggers-per-rotation = <15>;
+        triggers-per-rotation = <15>;
     };
 
     behaviors {
@@ -60,10 +61,10 @@
 
         layer_1 {
             bindings = <
-        &bootloader  &trans  &trans  &kp BACKSPACE
-        &trans       &trans  &trans  &trans
-        &trans       &trans  &trans  &trans
-&trans  &to 0        &trans  &trans  &trans
+        &bootloader  &trans      &trans      &kp BACKSPACE
+        &bt BT_CLR   &bt BT_PRV  &bt BT_NXT  &trans
+        &trans       &trans      &trans      &trans
+&trans  &to 0        &trans      &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_FAST_FORWARD C_REWIND>;
