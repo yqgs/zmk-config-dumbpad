@@ -33,6 +33,7 @@
 			, <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			;
 
+        wakeup-source;
 	};
 
 	default_transform: keymap_transform_0 {
