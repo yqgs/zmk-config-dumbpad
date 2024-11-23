@@ -70,6 +70,7 @@
 		a-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&pro_micro 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		resolution = <4>;
+        steps = <80>;
 	};
 
 	right_encoder: encoder_right {
@@ -78,8 +79,8 @@
 		a-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		resolution = <4>;
+        steps = <80>;
 	};
-
 };
 
 &pro_micro_i2c {
