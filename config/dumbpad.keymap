@@ -30,6 +30,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        calculator {
+            bindings = <&kp C_AL_CALC>;
+            key-positions = <0 1>;
+        };
+
+        calc_2 {
+            bindings = <&kp K_CALCULATOR>;
+            key-positions = <2 3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
