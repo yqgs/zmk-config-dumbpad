@@ -65,6 +65,8 @@
         &trans       &trans  &trans  &trans
 &trans  &to 0        &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_FAST_FORWARD C_REWIND>;
         };
     };
 };
