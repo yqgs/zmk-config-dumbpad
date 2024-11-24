@@ -36,12 +36,7 @@
 
         calculator {
             bindings = <&kp C_AL_CALC>;
-            key-positions = <0 1>;
-        };
-
-        calc_2 {
-            bindings = <&kp K_CALCULATOR>;
-            key-positions = <2 3>;
+            key-positions = <13 14>;
         };
     };
 
@@ -50,11 +45,11 @@
 
         default_layer {
             bindings = <
-          &kp C_PP  
-          &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_MINUS
-          &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS
-          &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_MULTIPLY
-          &td        &kp KP_N0  &kp KP_DOT  &td_divide_eq
+&kp C_PP
+&kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_MINUS
+&kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS
+&kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_MULTIPLY
+&td        &kp KP_N0  &kp KP_DOT  &td_divide_eq
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -62,11 +57,11 @@
 
         layer_1 {
             bindings = <
-        &trans
-        &bootloader  &trans      &trans      &kp BACKSPACE
-        &bt BT_CLR   &bt BT_PRV  &bt BT_NXT  &trans
-        &trans       &trans      &trans      &trans
-        &to 0        &trans      &trans      &trans
+&trans
+&bootloader  &trans      &trans      &kp BACKSPACE
+&bt BT_CLR   &bt BT_PRV  &bt BT_NXT  &trans
+&trans       &trans      &trans      &trans
+&to 0        &trans      &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_FAST_FORWARD C_REWIND>;
