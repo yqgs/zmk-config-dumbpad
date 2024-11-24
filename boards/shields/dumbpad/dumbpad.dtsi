@@ -84,7 +84,7 @@
 };
 
 &gpio0 {
-    extpower-pull: extpower-pull {
+    extpower_pull: extpower_pull {
         gpio-hog;
         gpios = <13 GPIO_ACTIVE_HIGH>;
         output-low;
