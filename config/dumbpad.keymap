@@ -15,6 +15,16 @@
         triggers-per-rotation = <15>;
     };
 
+    &gpio0 {
+        extpower-pull: extpower-pull {
+            gpio-hog;
+            gpios = <13 GPIO_ACTIVE_HIGH>;
+            output-low;
+            line-name = "Disable ext power pin";
+        };
+    };
+
+
     behaviors {
         td: td {
             compatible = "zmk,behavior-tap-dance";
