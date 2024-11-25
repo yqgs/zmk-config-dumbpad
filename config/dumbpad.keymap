@@ -42,7 +42,7 @@
 
         ext_off {
             bindings = <&ext_power EP_OFF>;
-            key-positions = <13 4>;
+            key-positions = <4 0>;
         };
     };
 
