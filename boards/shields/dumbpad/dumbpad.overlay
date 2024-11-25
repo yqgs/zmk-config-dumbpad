@@ -5,11 +5,3 @@
  */
 
  #include "dumbpad.dtsi"
-
-/ {
-    EXT_POWER {
-        compatible = "zmk,ext-power-generic";
-        control-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
-    };
-};
- 
