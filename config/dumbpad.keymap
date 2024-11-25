@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -37,6 +38,11 @@
         calculator {
             bindings = <&kp C_AL_CALC>;
             key-positions = <13 14>;
+        };
+
+        ext_off {
+            bindings = <&ext_power EP_OFF>;
+            key-positions = <13 4>;
         };
     };
 
